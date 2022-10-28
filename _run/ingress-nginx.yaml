@@ -24,6 +24,9 @@ automountServiceAccountToken: true
 # Source: ingress-nginx/templates/controller-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
+data:
+  enable-real-ip: "true"
+  proxy-buffer-size: "16k"
 metadata:
   labels:
     helm.sh/chart: ingress-nginx-4.0.1
